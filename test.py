@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-#Author - Prateek Mehta
+#Author - Yang Hu & Jinyu Tian
 
 import tweepy #Installed on premises
 import json
@@ -12,9 +12,8 @@ consumer_secret = "consumer_secret"
 access_key = "access_key"
 access_secret = "access_secret"
 
-def get_all_tweets(screen_name):
-    
-    #Twitter only allows access to a users most recent 3240 tweets with this method
+def get_all_tweets(keyword):
+  
     
     #authorize twitter, initialize tweepy
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -22,29 +21,23 @@ def get_all_tweets(screen_name):
     api = tweepy.API(auth)
     
     #initialize a list to hold all the tweepy Tweets
-    alltweets = []    
+    alltweets = []
     
-    #make initial request for most recent tweets (200 is the maximum allowed count)
-    new_tweets = api.user_timeline(screen_name = screen_name,count=10)
-    
-    #save most recent tweets
-    alltweets.extend(new_tweets)
-    
-    #save the id of the oldest tweet less one
-    oldest = alltweets[-1].id - 1
-    
-    #keep grabbing tweets until there are no tweets left to grab
-    while len(new_tweets) > 0:
+    #index for max_id in search
+    oldest = -1
+
+    #keep grabbing tweets until it hits 100 count (the result isn't not necessarily 100 tweets)
+    while len(alltweets) < 100:
         
-        #all subsiquent requests use the max_id param to prevent duplicates
-        new_tweets = api.user_timeline(screen_name = screen_name,count=10,max_id=oldest)
+        #get new tweets from api search
+        new_tweets = api.search(q = keyword,count = 10,max_id = str(oldest))
         
         #save most recent tweets
         alltweets.extend(new_tweets)
         
-        #update the id of the oldest tweet less one
-        oldest = alltweets[-1].id - 1
-        if(len(alltweets) > 15):
+        #update the id of the oldest
+        oldest = new_tweets[-1].id-1
+        if(not new_tweets):
             break
         print ("...%s tweets downloaded so far" % (len(alltweets)))
        
@@ -59,5 +52,5 @@ def get_all_tweets(screen_name):
     file.close()
 
 if __name__ == '__main__':
-    #pass in the username of the account you want to download
-    get_all_tweets("@Yang199703")
+    #get keyword from search the '#' is added in front of the word for hashtag
+    get_all_tweets("#Juul")
