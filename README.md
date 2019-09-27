@@ -26,3 +26,5 @@
 ## Juul Salesman
     As a Juul salesman, I can develop sales strategies according to people's attitude towards smoking.
 
+# Use case
+ ![usecase](https://github.com/YangHuNU/EC601_Mini_Project_GR15/blob/master/use%20case.png)
