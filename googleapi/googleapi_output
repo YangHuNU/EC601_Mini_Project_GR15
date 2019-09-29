@@ -3,4 +3,4 @@ We use two functions of google api to develop our project:
 (2)Analysis the entity in the text and anylysis the sediment of the words related to the entity.
 
 Here are the outputs of the google api, the inputs are the data grabbed from twitter api.
-![image](http://github.com/jinyu_tn/googleapi/output1.jpeg)
+![image](http://github.com/jinyu_tn/EC601_Mini_Project_GR15/googleapi/output1.jpeg)
