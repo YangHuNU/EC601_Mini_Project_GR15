@@ -7,6 +7,11 @@ Users can get sentimental feedbacks from a keyword search. By default, this prod
 ## Description on Minimum Value Product
 The system consists of two segments of Python program. First, using Twitter API to obtain 20 Twitter feeds. These feeds will be sent to the second segment; Google API for sentiment analysis. Then, the feedbacks from sentiment analysis goes back to the users.
 
+## Further Development (Potential Plans After MVP)
+As shown in the output files, the results from twitter API are mannually forwared to Google for analysis. We will need to build a user interface that once a keyword is typed in, the program itself will provide the final results.
+
+Keyword search from Twitter API can capture content that is more relevant to what user is looking for. Sentiment analysis from Google API can be more accurate. Precision improvement is important if we want to carry on this project after MVP.
+
 
 # User story
 ## Consumer 
