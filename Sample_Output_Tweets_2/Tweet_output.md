@@ -1,5 +1,5 @@
 # Tweet output 
-    Tweet output with keyword "#Juul"
+    Tweet output with keyword "Vape"
 
 ## What are these output?
     Each file contains one twitter feed obtained from [API.search](https://tweepy.readthedocs.io/en/latest/api.html) by keyword. There are twenty tweets each stored in a .txt file.
