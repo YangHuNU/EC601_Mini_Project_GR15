@@ -11,6 +11,7 @@ consumer_secret = "consumer_secret"
 access_key = "access_key"
 access_secret = "access_secret"
 
+
 def get_all_tweets(keyword):
   
     
@@ -47,10 +48,10 @@ def get_all_tweets(keyword):
     
     for j in range(0,20):
     	f = open(x[j],"a+")
-    	print(alltweets[j].text, "\n", file = f)
+    	print(alltweets[j].text, "\n", file = f)	#print the first 20 tweets to txt files
     	f.close()
     
 
 if __name__ == '__main__':
     #get keyword from search the '#' is added in front of the word for hashtag
-    get_all_tweets("#Juul")
+    get_all_tweets("Vape")
