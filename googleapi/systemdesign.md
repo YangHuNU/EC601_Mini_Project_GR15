@@ -1,4 +1,3 @@
-
 # The API we used
 https://cloud.google.com/natural-language/docs/sentiment-tutorial
 
