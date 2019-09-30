@@ -58,4 +58,3 @@ if __name__ == '__main__':
         text_name = 'gs://juul_project/'+str(1)+'.txt'    
         sample_analyze_entity_sentiment(text_name)
 
-
