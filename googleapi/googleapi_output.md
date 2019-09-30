@@ -6,11 +6,7 @@ https://cloud.google.com/natural-language/docs/sentiment-tutorial
     (1)Analysis the sediment of the text.</br>
     (2)Analysis the entity in the text and anylysis the sediment of the words related to the entity.
 
-    Here are the outputs of the google api, the inputs are the data grabbed from twitter api.
-
-![Image text](https://github.com/YangHuNU/EC601_Mini_Project_GR15/blob/TJY/googleapi/output1.jpeg)
-![Image text](https://github.com/YangHuNU/EC601_Mini_Project_GR15/blob/TJY/googleapi/output2.jpeg)
-![Image text](https://github.com/YangHuNU/EC601_Mini_Project_GR15/blob/TJY/googleapi/output3.jpeg)
+    The inputs are the data grabbed from twitter api and the outputs are in test.md
 
 
 # System Design and how our esign addresses your user stories
