@@ -12,5 +12,5 @@ https://cloud.google.com/natural-language/docs/sentiment-tutorial
 
 # System Design and how our esign addresses your user stories
       
-   After attaining the data from twitter API, we use google api to pick up entities in the text and only output the entities with 'CONSUMER_GOOD' type, which will filter the unrelated entities. Then we analyze the sediment the words related to these entities and the whole sediment of the text.
-   The results reflected whether the public are positive or negative to Juul, by which users can get the information about people's attitude to smoking, Juul and smoking health. 
+      After attaining the data from twitter API, we use google api to pick up entities in the text and only output the entities with 'CONSUMER_GOOD' type, which will filter the unrelated entities. Then we analyze the sediment the words related to these entities and the whole sediment of the text.
+      The results reflected whether the public are positive or negative to Juul, by which users can get the information about people's attitude to smoking, Juul and smoking health. 
