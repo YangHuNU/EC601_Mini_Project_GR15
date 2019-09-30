@@ -54,7 +54,7 @@ def sample_analyze_entity_sentiment(gcs_content_uri):
     print('The total MAGNITUDE of the text: {}'.format(sentiment.magnitude))
 
 if __name__ == '__main__':
-    for i in range(0,5):
+    for i in range(0,20):
         text_name = 'gs://juul_project/'+str(1)+'.txt'    
         sample_analyze_entity_sentiment(text_name)
 
